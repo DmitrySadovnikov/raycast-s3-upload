@@ -1,25 +1,59 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "s3-upload",
-  "title": "s3-upload",
-  "description": "Upload an image or file to your S3 bucket to get a URL for this file.",
+  "title": "S3 Upload",
+  "description": "Upload files in a single click",
   "icon": "command-icon.png",
   "author": "sadovnikov",
+  "access": "public",
   "categories": [
-    "Productivity",
-    "Media"
+    "Developer Tools"
   ],
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Upload to S3",
-      "description": "Upload an image or file to your S3 bucket to get a URL for this file.",
+      "name": "upload-files",
+      "title": "Upload Files",
+      "description": "Select files to upload to your AWS S3",
       "mode": "view"
     }
   ],
+  "preferences": [
+    {
+      "name": "accessKeyId",
+      "description": "Your AWS Access Key ID",
+      "type": "password",
+      "required": true,
+      "title": "Access Key ID",
+      "placeholder": "AKIA..."
+    },
+    {
+      "name": "secretAccessKey",
+      "description": "Your AWS Secret Access Key",
+      "type": "password",
+      "required": true,
+      "title": "Secret Access Key"
+    },
+    {
+      "name": "region",
+      "description": "Your AWS bucket region",
+      "type": "textfield",
+      "required": true,
+      "title": "Region"
+    },
+    {
+      "name": "bucket",
+      "description": "Your AWS bucket name",
+      "type": "textfield",
+      "required": true,
+      "title": "Bucket"
+    }
+  ],
   "dependencies": {
-    "@raycast/api": "^1.70.3"
+    "@aws-sdk/client-s3": "^3.609.0",
+    "@raycast/api": "^1.70.3",
+    "@tanstack/react-query": "^5.28.4",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
