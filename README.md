@@ -1,4 +1,4 @@
-# Raycase S3 Upload
+# Raycast S3 Upload
 
 Why pay for third-party services to store your files when you can upload an image or file to your S3 bucket, get a URL for the file, and use it on the internet?
 Usually, third-party services charge $5-10 to store your files, but AWS S3 allows you to store terabytes almost for free ($0.023 per GB). [Check AWS S3 Pricing](https://aws.amazon.com/s3/pricing/).
